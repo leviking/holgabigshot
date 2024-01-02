@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300&display=swap" rel="stylesheet">
+
+        <title>Holga Big Shot</title>
+        <style>
+            body {
+                font-family: 'Lexend', sans-serif;
+		margin-left: 25%;
+		margin-right: 25%;
+            }
+	    h1 {
+		    font-weight: 100;
+	    }
+	    h2 { font-weight: 100; }
+	    section {
+		    font-weight: 300;
+	    }
+        </style>
+    </head>
+    <body>
+        <h1>Holga Big Shot</h1>
+	<hr />
+	<section>
+		<h2>Motivation</h2>
+		<p>I've always loved the polaroid big shot, but pack film is sadly gone. I keep meaning to make a new version of a big shot with large format film, or polaroids, or fuji instax, but I just can't seem to ever get off my ass and do it.</p>
+		<p>Truthfully what I like most about the big shot is the energy of it, legend has it someone wanted to make an idiot proof portrait camera and they ended up doing it, a cult appreciation of it ensued. No offense to all the modders and people who have made similar cameras to the Big Shot in years past, but all of those lacked a certain shitty-ness the original big shot had; after all, the original big shot was $19.95! Granted that's like $150 after inflation (here in 2023 at least). Pilfering good parts off existing cameras just doesn't keep to the spirit of it imo, it's too good. I want something shitty, cheap, something that doesn't rely on the used market. </p>
+	</section>
+	<section>
+		<h2>Enter Holga</h2>
+		<p>Holgas are cheap, kinda shitty, and beloved for that. In many ways they are a lot like a big shot, granted 120 roll film is a little small for the big shot portraits which are ready to use right out of the camera, but you know what? This laziness is just the energy I might actually be able to follow through with, know thyself, incrementalism, etc.</p>
+		<p>Oddly, and this is almost never the case, Holgas have a bit too many features to be a big shot. For one, the lense is too "normal" and it focuses! Some of them even have <i>two</i> aperture settings. They do have a body, film advance, viewfinder, and very usable flash built in or hot shoe. Overall though, the Holga seems like a good base to start making an affordable, easy, Big Shot replacement. At least I'll document my attempts here.</p>
+	</section>
+	<section>
+		<h2>Investigation</h2>
+		<p>Since 120 film is distinctly not packfilm (I'm as sad about that as anyone). Let's get an idea of what that amazing big shot framing is. I pulled up a big shot portrait of John Lennon and, using image editing software, determined that if a packfilm sheet is 108mm tall, and John Lennon's head is approximately 53mm tall on the image the framing makes a human head about half the height of the film. 120 film is 56mm tall, so that makes the head 28mm on 120 film. If we assume a normal human head is 200mm tall, that gives us a magnification ratio of 0.14. I like the distance of the Big Shot's focus which is 39in (probably also 1 meter, but we don't actually know the design intent). Assuming I'm standing 39 inches away and I want a magnification of 0.14, we come to a couple of different options in terms of lenses, but 125mm is pretty close and a normalish size lens.</p>
+		<p>For our 125mm lens to focus at 39in away and produce an approximately 28mm tall human head, the lense needs to be 143mm away from the film plane. I'm not using any precision instruments here, but it appears as though the Holga body and shutter must account for about 48mm of the distance between the lens and the film plane, if we trust the 60mm on the holga lens. 143mm - 48mm = 95mm (that's a nice number, I like that).</p>
+		<p>Printing a 95mm tall extension tube is pretty straightforward, but can I even take a picture with this thing? The holga shutter has a 6mm hole in it, for a 60mm lens this is f/10. For a 125mm lens, it's f/22-ish. That sounds bad, and it is, but remember the big shot was <i>really</i> slow. Like only worked with a flash slow. I took the time to measure a big shot years ago. Mine was something liek f/33-f/50 depending on the darkness setting. You could actually take a properly exposed big shot photo on the 100 speed film outdoors in direct bright sunlight, but the big shot may have only been 1/30th of a second, I don't remember. Big shots were made to be used with magic cubes which were bright AF, and now hard to find and no longer still made, so we need to avoid using those, which should be pretty easy because the Holga has an electronic flash sync and I'm definitely not trying to make a mechanism to set of a mechanical magic cube. That diversion aside, f/22 and a 1m distance will produce a properly-ish exposed image with 400 speed film (or 320 if you're being pedantic) using the holga built in flash which I believe is GN12 so some Hp5 or TriX should work fine. This may come back to bite me, but we'll see. </p>
+	</section>
+	<section>
+		<h2>Focusing</h2>
+		<p>At the time of writing my plan is to use the tried and true method of attaching a string to the camera at the appropriate distance. If it goes exceedingly well and I don't lose interest I may try to make a rangefinder, and have even sourced the glass for it.
+		</p>
+	</section>
+	<section>
+		<h2>Cost</h2>
+		<p>I'm really not interested in making something that costs $200 as an approximation of something that originally cost $150 after inflation, so I need to verify that I can get this thing made for a reasonable price. <a href="https://www.thorlabs.com/thorproduct.cfm?partnumber=LE1156" target="_blank">Thorlabs</a> sells a 125mm uncoated glass postive meniscus lens for $24.00. Freestyle sells a brand new <a href="https://www.freestylephoto.com/144120-Holga-120N-Camera-Black" target="_blank">Holga</a> for $40. Putting us at a price of $64, let's assume $1 for plastic and odds and ends. If I do end up making a rangefinder, that will be a couple of dollars extra but probably still come in under $70. Not bad for buying things not at scale. If this takes off maybe I can find a supplier for plastic lenses for less than $24.</p>
+	</section>
+	<h1>Design</h1>
+	<hr />
+	<section>
+		<h2>Extension Tube</h2>
+		<p>Naming things is hard, I'm calling this first part the extension tube. It needs to be 95mm long and mate up to the shutter and the holga body. It's pretty straightforward but the tiny features to make things actually fit and line up are somewhat hard to reverse engineer. For the most part I got it by the third attempt. I may post a drawing on here someday if I get around to it. I'd like for this to be a better resource than most for open source hardware, since an STL alone is terrible for the spirit of open source. </p>
+	</section>
+	<section>
+		<h2>Lens Housing</h2>
+		<p>I have to make a new lens housing to attach to the shutter. Fortunately the lens on the Holga is just screwed on and has a retaining screw that prevents it from turning too much after installed. The thread is a bit goofy, it's an internal thread with 8mm pitch by my measurement on a diameter of 49mm. For the actual threads I did a height of 1.8mm and a normal 60 degree angle. There are 4 equal starts for the holga. This resulted in a thread that actually screws on but isn't quite right. Anyone who has knowledge of the actual thread profile please let me know, all I have is cheap calipers and eye-balling it. Oh, a gotcha is you have to come in from the wall by about 10mm to clear the retaining screw. From there it's just a matter of making a ledge for the lens to sit on and a way to hold it in place.</p>
+	</section>
+
+	<h1>Construction</h1>
+	<hr />
+	<section>
+		<h2>Extension Tube</h2>
+		<p>Designing this thing was pretty straighforward, prints took 4 hours, and I got it in 3 attempts. The first I didn't allow for enough tolerance. After getting the tolerances down, I had the fillet on the sides wrong (it's still not perfect) and had the holes slightly wrong. I adjusted the fillet, the hole position, and realized that I needed to provide clearance so that the shutter assembly would be able to mate up to the extension tube properly. Third attempt is good enough. Total time spent is probably 8 hours designing, 12 hours printing.</p>
+	</section>
+	<section>
+		<h2>Lens Housing</h2>
+		<p>It also took 3 attempts on the lens housing, clearly that's just how things work. First attempt there wasn't enough clearance between the "external" thread of the shutter assembly and the "internal" thread of the new lens housing, it wouldn't fit at all, so I made it real loose. That didn't work either so I cut the lens housing into pieces to make sure the threads matched up and they did at least well enough, so I was real confused as to why it wouldn't fit on. Then I realized the stand off thing the lens retaining screw goes in was hitting against the angled wall I added. This is where I determined you need to go in 10mm to clear that before any feature. Adding that, it just worked. Now I'm waiting on the proper thorlabs lens to test with the proper focal length. I'll likely need another couple of prints to properly retain it as well as adjust the focus.
+		<p>
+	</section>
+
+    </body>
+</head>
